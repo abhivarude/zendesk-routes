@@ -3,8 +3,6 @@ const app=express();
 let bodyParser=require('body-parser');
 app.use(bodyParser.json())
 const cors=require("cors");
-
-require("dotenv").config();
 const connection=require("./moduler/mongoose");
 const authroute=require("./routes/authenticate");
 connection.once('open',()=>{console.log("db connected")});
